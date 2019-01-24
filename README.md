@@ -21,4 +21,4 @@ yo klay-dapp
 * Feel free to learn more about Yeoman.
 
 ## License
-MIT © underbleu
+MIT © [underbleu](underbleu.dev@gmail.com)
