@@ -46,8 +46,6 @@
   text-decoration: underline;
   opacity: 0.6;
 
-  &:hover { opacity: 1; }
-
   &::before {
     content: "---";
     display: inline-block;
@@ -61,6 +59,9 @@
     line-height: 3px;
     color: black;
   }
+
+  &--link { text-decoration: underline; }
+  &--link:hover { opacity: 1; }
 }
 
 .Toast__close {

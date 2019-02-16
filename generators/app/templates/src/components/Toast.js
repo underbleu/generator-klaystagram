@@ -33,10 +33,16 @@ class Toast extends Component<Props> {
         <p className="Toast__message">{toast.message}</p>
         {
           toast.txHash &&
+          <div className="Toast__txHash">
+            {toast.txHash}
+          </div>
+        }
+        {
+          toast.link &&
           <LinkNewTab
-            className="Toast__txHash"
-            link={`${KLAYTN_SCOPE}transaction/${toast.txHash}`}
-            title={`${toast.txHash}`}
+            className="Toast__txHash Toast__txHash--link"
+            link={`${KLAYTN_SCOPE}transaction/${toast.link}`}
+            title={`${toast.link}`}
           />
         }
         <IconButton

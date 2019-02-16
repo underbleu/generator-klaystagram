@@ -79,7 +79,7 @@ export const uploadPhoto = (
           status: receipt.status ? 'success' : 'fail',
           message: `Received receipt! It means your transaction is
           in klaytn block (#${receipt.blockNumber}) (uploadPhoto)`,
-          txHash: receipt.transactionHash,
+          link: receipt.transactionHash,
         })
         const tokenId = receipt.events.PhotoUploaded.returnValues[0]
         dispatch(updateFeed(tokenId))
@@ -110,7 +110,7 @@ export const transferOwnership = (tokenId, to) => (dispatch) => {
         status: receipt.status ? 'success' : 'fail',
         message: `Received receipt! It means your transaction is
           in klaytn block (#${receipt.blockNumber}) (transferOwnership)`,
-        txHash: receipt.transactionHash,
+        link: receipt.transactionHash,
       })
       dispatch(updateOwnerAddress(tokenId, to))
     })
