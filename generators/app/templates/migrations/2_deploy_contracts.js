@@ -4,9 +4,8 @@ const fs = require('fs')
 module.exports = function (deployer) {
   deployer.deploy(Klaystagram)
     .then(() => {
-    // Record recently deployed contract address to 'deployedAddress' file.
     if (Klaystagram._json) {
-      // Save abi file to deployedABI.
+      // 1. Record recently deployed contract's abi file to 'deployedABI'
       fs.writeFile(
         'deployedABI',
         JSON.stringify(Klaystagram._json.abi, 2),
@@ -16,6 +15,7 @@ module.exports = function (deployer) {
         })
     }
 
+    // 2. Record recently deployed contract's address to 'deployedAddress'
     fs.writeFile(
       'deployedAddress',
       Klaystagram.address,

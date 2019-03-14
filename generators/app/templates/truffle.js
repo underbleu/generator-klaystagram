@@ -24,7 +24,7 @@ module.exports = {
     },
   },
 
-  // @TODO: 엘리엇 컴파일러 버젼 설명을 써주세요
+  // Specify the version of compiler, we use 0.4.24
   compilers: {
     solc: {
       version: '0.4.24',
