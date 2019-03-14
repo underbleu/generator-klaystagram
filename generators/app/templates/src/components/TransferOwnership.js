@@ -25,7 +25,7 @@ class TransferOwnership extends Component {
     const { id, transferOwnership } = this.props
     const { to } = this.state
 
-    if (!isValidAddress(newOwner)) {
+    if (!isValidAddress(to)) {
       return this.setState({
         warningMessage: '* Invalid wallet address',
       })
