@@ -41,7 +41,7 @@ module.exports = class extends Generator {
     this.fs.copy(this.templatePath('frontserver.local.js'), this.destinationPath('frontserver.local.js'))
     this.fs.copy(this.templatePath('frontserver.real.js'), this.destinationPath('frontserver.real.js'))
     this.fs.copy(this.templatePath('package.json'), this.destinationPath('package.json'))
-    this.fs.copy(this.templatePath('truffle.js'), this.destinationPath('truffle.js'))
+    this.fs.copy(this.templatePath('truffle-config.js'), this.destinationPath('truffle-config.js'))
     this.fs.copy(this.templatePath('webpack.config.js'), this.destinationPath('webpack.config.js'))
     this.fs.copy(this.templatePath('webpack.prod.config.js'), this.destinationPath('webpack.prod.config.js'))
   }
