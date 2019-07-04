@@ -67,7 +67,7 @@ export const uploadPhoto = (
       from: getWallet().address,
       gas: '200000000',
     })
-      .once('transactionHash', (txHash) => {
+      .once('transactionHash', ({ txHash }) => {
         ui.showToast({
           status: 'pending',
           message: `Sending a transaction... (uploadPhoto)`,
